@@ -20,7 +20,7 @@ function handleRandomChoice(message) {
     const picked = args[Math.floor(Math.random() * args.length)];
 
     // 5. 回覆結果
-    message.reply(`**${picked}**`);
+    message.reply(`\n🦑<(${picked})`);
 }
 
 // 關鍵：把這個 function 導出，讓 index.js 可以使用
