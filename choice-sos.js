@@ -13,14 +13,14 @@ function handleRandomChoice(message) {
 
     // 3. 防呆：如果沒給選項
     if (!content || args.length === 0 || args[0] === '') {
-        return message.reply('魷沒得選');
+        return message.reply('### 🦑沒得選，救救魷');
     }
 
     // 4. 隨機選一個
     const picked = args[Math.floor(Math.random() * args.length)];
 
     // 5. 回覆結果
-    message.reply(`\n🦑<(${picked})`);
+    message.reply(`\n${message.author}\n🦑<(**${picked}**)`);
 }
 
 // 關鍵：把這個 function 導出，讓 index.js 可以使用
