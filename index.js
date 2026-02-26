@@ -3,6 +3,7 @@ require('dotenv').config({ path: path.join(__dirname, '.env') });
 
 // 1. 引入你的隨機功能模組
 const { handleRandomChoice } = require('./choice-sos.js');
+const { handleDiceRoll } = require('./dice-normal.js');
 
 console.log("--- 偵錯模式 ---");
 console.log("目前 index.js 所在的資料夾是:", __dirname);
@@ -37,8 +38,11 @@ client.on('messageCreate', message => {
     // 當訊息以「隨機 」(包含空白) 開頭時，就交給 choice-helper 處理
     if (message.content.startsWith('隨機 ')) {
         handleRandomChoice(message);
-    }
 
+    if (message.content.startsWith('骰子 ')) {
+        handleDiceRoll(message);
+        }
+        }
     // --- 指令區結束 ---
 });
 
