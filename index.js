@@ -38,11 +38,12 @@ client.on('messageCreate', message => {
     // 當訊息以「隨機 」(包含空白) 開頭時，就交給 choice-helper 處理
     if (message.content.startsWith('隨機 ')) {
         handleRandomChoice(message);
+    }
 
     if (message.content.startsWith('骰子 ')) {
         handleDiceRoll(message);
         }
-        }
+        
     // --- 指令區結束 ---
 });
 
