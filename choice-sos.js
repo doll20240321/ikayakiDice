@@ -1,4 +1,4 @@
-// choice-helper.js
+// choice-sos.js
 
 /**
  * 處理隨機選擇的邏輯
